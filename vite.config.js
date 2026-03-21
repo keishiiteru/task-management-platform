@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
 import vue from '@vitejs/plugin-vue';
-import { colors } from './resources/js/colors.js';
 
 export default defineConfig({
     plugins: [
@@ -13,11 +12,6 @@ export default defineConfig({
         vue(),
         tailwindcss(),
     ],
-    theme: {
-        extend: {
-            colors: colors
-        }
-    },
     server: {
         watch: {
             ignored: ['**/storage/framework/views/**'],
