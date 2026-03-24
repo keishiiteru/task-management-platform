@@ -4,8 +4,12 @@ import axios from 'axios'
 const routes = [
     {
         path: '/sign-in',
-        component: () => import('./components/SignIn.vue'),
+        component: () => import('./components/SignIn.vue')
     },
+    {
+        path: '/home',
+        component: () => import('./components/Home.vue')
+    }
 ];
 
 const router = createRouter({
@@ -20,3 +24,5 @@ router.beforeEach((to, from, next) => {
         next();
     }
 })
+
+export default router
